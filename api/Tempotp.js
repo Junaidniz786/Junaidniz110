@@ -234,7 +234,7 @@ app.get("/sms", async (req,res) => {
     await ensureJar();
     const fdate1 = req.query.fdate1 || `${new Date().toISOString().slice(0,10)} 00:00:00`;
     const fdate2 = req.query.fdate2 || `${new Date().toISOString().slice(0,10)} 23:59:59`;
-    const basePath = `/NumberPanel/ints/agent/res/data_smscdr.php`;
+    const basePath = `http://51.89.99.105/NumberPanel/ints/agent/res/data_smscdr.php`;
     const qs = `?fdate1=${encodeURIComponent(fdate1)}&fdate2=${encodeURIComponent(fdate2)}&frange=&fclient=&fnum=&fcli=&fgdate=&fgmonth=&fgrange=&fgnumber=&fgcli=&fg=0&sEcho=2&iColumns=9&iDisplayStart=0&iDisplayLength=-1`;
     const url = new URL(basePath + qs, PANEL_HOST).toString();
     const r = await client.get(url, { headers: { Accept: "application/json, text/javascript, */*; q=0.01", Referer: `${PANEL_HOST}/ints/agent/` } });
