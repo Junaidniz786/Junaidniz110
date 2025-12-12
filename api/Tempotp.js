@@ -213,7 +213,7 @@ app.get("/numbers", async (req,res) => {
   try {
     await ensureJar();
     // Panel-specific numbers path (adjust if different)
-    const url = new URL("/NumberPanel/ints/agent/res/data_smsnumbers.php?frange=&fclient=&sEcho=2&iColumns=8&iDisplayStart=0&iDisplayLength=-1", PANEL_HOST).toString();
+    const url = new URL("http://51.89.99.105/NumberPanel/ints/agent/res/data_smsnumbers.php?frange=&fclient=&sEcho=2&iColumns=8&iDisplayStart=0&iDisplayLength=-1", PANEL_HOST).toString();
     const r = await client.get(url, { headers: { Accept: "application/json, text/javascript, */*; q=0.01", Referer: `${PANEL_HOST}/ints/agent/` } });
     // try to parse JSON if returned
     const txt = r.data;
