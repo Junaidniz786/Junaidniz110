@@ -10,8 +10,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 const BASE_URL = "http://51.89.99.105/NumberPanel";
 
-const USERNAME = process.env.PANEL_USER || "Junaidali786";
-const PASSWORD = process.env.PANEL_PASS || "Junaidali786";
+const USERNAME = process.env.PANEL_USER || "Junaidniz786";
+const PASSWORD = process.env.PANEL_PASS || "Junaidniz786";
 
 const HEADERS = {
   "User-Agent":
